@@ -11,6 +11,7 @@ class Calculator
     when Subtraction::SIGN;    Subtraction.solve(operand1, operand2)
     when Multiplication::SIGN; Multiplication.solve(operand1, operand2)
     when Division::SIGN;       Division.solve(operand1, operand2)
+    else raise NoMethodError
     end
   end
 end

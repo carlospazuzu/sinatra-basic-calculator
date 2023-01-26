@@ -1,6 +1,7 @@
 class MathOperation
   SIGN = nil
 
-  def solve(operand1, operand2); end
-
+  def self.solve(operand1, operand2)
+    raise TypeError unless operand1.kind_of?(Numeric) && operand2.kind_of?(Numeric)
+  end
 end

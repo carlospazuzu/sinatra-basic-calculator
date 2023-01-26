@@ -15,6 +15,8 @@ require './entities/division.rb'
 require './entities/multiplication.rb'
 require './entities/subtraction.rb'
 require './entities/sum.rb'
+require './entities/math_operation.rb'
+require './entities/calculator.rb'
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

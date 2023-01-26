@@ -4,6 +4,7 @@ class Division < MathOperation
   SIGN = '/'
 
   def self.solve(operand1, operand2)
+    super(operand1, operand2)
     return operand1 / operand2.to_f unless operand2 == 0
     raise ZeroDivisionError
   end
