@@ -1,5 +1,5 @@
 class MathOperation
-  OPERATION_SIGN = nil
+  SIGN = nil
 
   def solve(operand1, operand2); end
 
