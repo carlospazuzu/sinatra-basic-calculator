@@ -1,6 +1,9 @@
 ## Sinatra Calculator
 A simple calculator written in ruby with sinatra web server to study web concepts
 
+## UML Diagram
+![uml](UML-diagram.svg)
+
 ## Steps to run
 
 Install dependences
