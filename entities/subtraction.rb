@@ -1,7 +1,10 @@
-class Subtraction < MathOperation
-  OPERATION_SIGN = '+'
+require_relative 'math_operation'
 
-  def solve(operand1, operand2)
+class Subtraction < MathOperation
+  SIGN = '-'
+
+  def self.solve(operand1, operand2)
+    super(operand1, operand2)
     operand1 - operand2
   end
 
