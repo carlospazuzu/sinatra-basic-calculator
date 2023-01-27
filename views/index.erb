@@ -1,1 +1,40 @@
-<h1>Hello, <%= name %> </h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sinatra Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sinatra Calculator</h1>
+    <h2><%= result.to_s.end_with?('.0') ? result.to_s.slice(0...(result.to_s.length - 2)) : result %></h2>
+    <div class="row">
+      <form action="/" method="post">
+        <div class="three columns">
+          <label for="operand1">Operand 1</label>
+          <input type="number" step="0.01" name="operand1" placeholder="Type the 1st operand" class="u-full-width" required>
+        </div>
+        <div class="three columns">
+          <label for="operator">Operation</label>
+          <select name="sign" id="operator" class="u-full-width">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+        <div class="three columns">
+          <label for="operand2">Operand 2</label>
+          <input type="number" step="0.01" name="operand2" placeholder="Type the 2nd operand" class="u-full-width" required>
+        </div>
+        <div class="three columns">
+          <label for="">&nbsp</label>
+          <input type="submit" value="calculate">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
