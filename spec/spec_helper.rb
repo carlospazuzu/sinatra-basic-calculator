@@ -11,12 +11,20 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
+require File.join(File.dirname(__FILE__), '..', 'server.rb')
+
 require './entities/division.rb'
 require './entities/multiplication.rb'
 require './entities/subtraction.rb'
 require './entities/sum.rb'
 require './entities/math_operation.rb'
 require './entities/calculator.rb'
+
+require 'capybara'
+require 'capybara/rspec'
+
+Capybara.app = Server 
+Capybara.default_driver = :selenium
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
